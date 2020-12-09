@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <pre id = "canvas"></pre>
+    <input id= "height" type = "number" value="5">
+    <input id= "width" type="number" value="10">
+    <button onclick="vehcn()">draw</button>
+    <script>
+        function vehcn() {
+            document.getElementById('canvas').innerText = ''
+            let height = Number(document.getElementById('height').value)
+            for (let i = 0; i < height; i ++) {
+                vemotdong()
+            }
+            console.log('ket thuc')
+        }
+
+        function vemotdong() {
+            console.log('vemotdong')
+            let width = Number(document.getElementById('width').value)
+            for (let j = 0; j < width; j++) {
+                vemotdiem()
+            }
+            document.getElementById('canvas').innerText += '\n'
+        }
+
+        function vemotdiem () {
+            console.log('vemotcot')
+            document.getElementById('canvas').innerText += '*'
+        }
+    </script>
+</body>
+
+</html>
